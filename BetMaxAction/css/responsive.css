@@ -1,0 +1,92 @@
+﻿/* Normal sized monitors*/
+@media only screen and (max-width: 1820px) {
+    #contests .col0, #contests .col5 {
+        width: 50px;
+    }
+
+    #contests .col1 {
+        width: calc(28% - 10px);
+    }
+
+    #contests .col2 {
+        width: 18%;
+    }
+
+    #contests .col3 {
+        
+    }
+
+    #contests .col4 {
+        width: 18%;
+    }
+    #userprofile_details {
+        
+        margin-left: 79%;
+    }
+
+    #notification_list {
+        
+        margin-left: 79%;
+    }
+}
+
+@media only screen and (max-width: 1275px) {
+    #contests .col1 {
+        width: calc(25% - 10px);
+    }
+
+     #contests .col2,#contests .col4 {
+        width: 15%;
+    }
+    #userprofile_details {
+        
+        margin-left: 73%;
+    }
+
+    #notification_list {
+        
+        margin-left: 73%;
+    }
+}
+/* =============================================
+   TABLET
+============================================= */
+
+@media only screen and (max-width: 1025px) {
+    #contests .col1 {
+        width: calc(24% - 10px);
+    }
+
+    #contests .col2,#contests .col4 {
+        width: 15%;
+    }
+
+    #userprofile_details {
+        
+        margin-left: 68%;
+    }
+
+    #notification_list {
+        
+        margin-left: 68%;
+    }
+}
+
+/* =============================================
+   PHONE
+============================================= */
+@media only screen and (max-width: 767px) {
+    #profile {
+       
+    }
+
+    #userprofile_details {
+        
+        margin-left: 65%;
+    }
+    #notification_list {
+        
+        margin-left: 65%;
+    }
+     
+}

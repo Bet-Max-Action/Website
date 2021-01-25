@@ -1,0 +1,584 @@
+﻿/*---------------------------------------------------------------------
+ *  RESET
+ *---------------------------------------------------------------------*/
+ 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+
+html, body, form, main {
+    height: 100%;
+}
+#logo {
+    width:15%;
+    padding:10px 0px;
+    float:left;
+    overflow:hidden;
+    min-height:50px;
+    min-width:260px;
+}
+
+    #logo img {
+        margin-left: 30px;
+    }
+
+#profile {
+    
+    padding:10px 15px;
+    
+    overflow:hidden;
+    min-height: 51px;
+}
+
+#leftnav {
+    width:15%;
+    padding:0px;
+    min-width:260px;
+    float:left;
+    overflow:hidden;
+    font-size:20px;
+    height: 100%;
+    
+   
+}
+
+    #leftnav a {
+        text-decoration:none;
+        color:#FFFFFF;
+    }
+
+    #leftnav a:hover {
+        color:#eca100;
+    }
+
+    #leftnav .navitem.active a:hover {
+        color:#ffffff;
+    }
+
+#main {
+    
+   padding:0px 15px;
+   color:white;
+    
+    overflow:hidden;
+    height: 100%;
+}
+
+    #main h1 {
+        font-size:32px;
+        width: 50%;
+    float: left;
+    }
+.navitem {
+    padding:20px;
+}
+
+    .navitem:hover {
+         color:#eca100;
+    }
+
+#notifications {
+    position: relative;
+    float:right;
+    margin-top:8px;
+    font-size:24px;
+}
+
+.notification {
+        margin: 5px;
+    padding: 5px;
+    border-bottom: white dashed 1px;
+    font-size:20px;
+    float: left;
+}
+
+a {
+    color:white;
+}
+
+a:hover {
+    color:#eca100;
+}
+
+.contest:hover {
+    color:#eca100;
+}
+
+#userprofile {
+    position: relative;
+    float:right;
+    font-size:36px;
+}
+#userprofile_details {
+    position: absolute;
+    display:none;
+     /*margin-left: 87%;*/
+        z-index: 100;
+    width: 300px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+    background-color: #373737;
+    color:#FFF;
+    padding:20px;
+      top:71px;
+   right:0;
+}
+    #userprofile_details h2 {
+        font-size: 24px;
+    }
+
+#additionaldetails {
+    font-size: 20px;
+}
+
+#additionaldetails div {
+    margin:10px;
+}
+
+#notification_list {
+    position: absolute;
+    display:none;
+    /*margin-left: 87%;*/
+        z-index: 100;
+    width: 300px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+    background-color: #373737;
+    color:#FFF;
+    padding:10px;
+    top:71px;
+   right:0;
+}
+
+.notification_left {
+    float: left;
+    padding: 10px;
+    height: 100%;
+    overflow: hidden;
+        margin-top: 20px;
+    width: 40px;
+}
+
+.notification_right {
+    float: left;
+    padding: 10px;
+    height: 100%;
+    overflow: hidden;
+    width: 200px;
+}
+
+.n_subject {
+    font-size:16px;
+    font-style:italic;
+    margin-top: 5px;
+}
+
+#profile .fa-icon {
+    padding:20px;
+}
+
+
+.red-text {
+    color:#26651b;
+}
+
+.red-bg {
+    background-color:#26651b;
+}
+
+.white-text {
+    color:#ffffff;
+}
+
+.white-bg {
+    background-color:#ffffff;
+}
+
+.darkgrey-text {
+    color:#222222;
+}
+
+.darkgrey-bg {
+    background-color:#222222;
+}
+
+.lightgrey-text {
+    color:#373737;
+}
+
+.lightgrey-bg {
+    background-color:#373737;
+}
+
+.yellow-text {
+    color:#eca100;
+}
+
+.yellow-bg {
+    background-color:#eca100;
+}
+
+.orange-bg {
+    background-color:#ad7600;
+}
+
+.fa-icon {
+    padding:20px;
+}
+
+.navitem.active {
+    background-color:#ad7600;
+}
+
+    .navitem.active:hover {
+        color:#ffffff;
+    }
+
+#login {
+    background-color:#26651b;
+    color:white;
+    
+    overflow:hidden;
+    height: 100%;
+}
+
+.centered {
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#login h2 {
+        font-size: 28px;
+    margin: 10px 130px;
+}
+
+#loginbox {
+    color:white;
+    padding:30px;
+    border: solid 1px #ca8a00;
+}
+
+.centered img {
+    position: relative;
+  
+    width: 350px;
+    margin-bottom: 50px;
+
+
+}
+
+.button {
+}
+
+#login input[type=submit] {
+    top: 100%;
+    right: 0;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 700;
+    display: inline-block;
+    width: auto;
+    background: #ca8a00;
+    border: none;
+    outline: none;
+    height: 40px;
+    padding: 0 70px;
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
+    cursor: pointer;
+}
+
+    #login input[type=submit]:hover {
+        background:#004876;
+    }
+
+    #login input[type=text], #login input[type=password] {
+   
+    font-weight: 500;
+    font-size: 16px;
+    color: #222222;
+    position: relative;
+    box-sizing: border-box;
+    padding: 0 10px;
+    margin: 5px 0 5px 0;
+    border: none;
+    outline: none;
+    background: #ffffff;
+    height: 40px;
+    width: 100%;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.table_body {
+    border:solid 1px #373737; /*light grey*/
+}
+
+.table_header {
+        padding: 20px;
+        display: inline-block;
+        width: 100%;
+
+}
+
+.header {
+    padding:20px;
+    display: inline-block;
+    width: 15%;
+}
+
+.spacer {
+    width:5%;
+}
+
+#login label {
+    font-size:18px;
+}
+
+#login .signup_msg {
+    margin-top:20px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+/*---------------------------------------------------------------------
+    *  contests
+    *---------------------------------------------------------------------*/
+    #contests {
+    position: relative;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: normal;
+    margin: 0 0 30px 0;
+    min-width:770px;
+    }
+    #contests .fa-file-pdf {
+    margin-right: 5px;
+    }
+        #contests .col0 {
+            position: relative;
+    box-sizing: border-box;
+    float: left;
+    width: 50px;
+    padding: 20px 10px 20px 20px;
+    margin: 0 10px;
+        }
+    #contests .col1 {
+    position: relative;
+    box-sizing: border-box;
+    float: left;
+    width: calc(30% - 10px);
+    padding: 20px 10px 20px 20px;
+    }
+    #contests .col1 a {
+    font-weight: 600;
+    }
+    #contests .col2 {
+    position: relative;
+    box-sizing: border-box;
+    float: left;
+    width: 20%;
+    padding: 20px 10px 20px 20px;
+    margin: 0 10px;
+    }
+    #contests .col3 {
+    position: relative;
+    box-sizing: border-box;
+    float: left;
+    width: 20%;
+    min-width:170px;
+    padding: 20px 10px 20px 20px;
+    }
+    #contests .col4 {
+        position: relative;
+    box-sizing: border-box;
+    float: left;
+    width: 20%;
+    padding: 20px 10px 20px 20px;
+    margin: 0 10px;
+        }
+
+     #contests .col5 {
+            position: relative;
+    box-sizing: border-box;
+    float: left;
+    width: 50px;
+    padding: 20px 10px 20px 20px;
+        }
+    #contests_headers .col0,#contests_headers .col1, #contests_headers .col2, #contests_headers .col3, #contests_headers .col4, #contests_headers .col5 {
+    background: #373737;
+    padding: 15px 10px 15px 20px;
+    }
+    #contests_headers .col0,#contests_headers .col5{
+
+    height: 46px;
+}
+    #contests_headers {
+    color: #ffffff;
+    }
+    #contests_headers h3 {
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -.5px;
+    margin:0px;
+    color:#ffffff;
+    }
+    .rtoggle {
+    position: absolute;
+    top: 12px;
+    right: 8px;
+    opacity: .6;
+    }
+    .contest {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px dashed #373737;
+        height: 75px;
+    }
+
+#contest_details div, .ViewAllStandings {
+    background-color: #26651b;
+    padding: 20px;
+    width: 300px;
+    margin: 10px;
+    float: left;
+    
+}
+
+#contest_details div a, .ViewAllStandings a {
+    padding: 40px;
+    text-decoration:none;
+    font-size:24px;
+    text-align:center;
+}
+
+#contest_summary {
+    margin: 10px;
+}
+
+#contest_standings {
+    margin: 10px;
+        width: 760px;
+}
+
+    #contest_standings .you {
+        background-color: #ad7600;
+    }
+
+#tournament_balance, #tournament_leader {
+    margin: 10px;
+    font-size:24px;
+
+}
+
+#tournament_balance span, #tournament_leader span {
+    margin: 10px;
+    font-size:32px;
+
+}
+
+.standing {
+    float:left;
+    width:100%;
+}
+
+    .standing div {
+        float:left;
+            padding: 10px;
+    }
+
+    .standing .place {
+        width:100px;
+    }
+
+     .standing .entrant {
+         width: 400px;
+    }
+
+      .standing .tournament_dollars {
+          width:200px;
+    }
+
+.headings div {
+    background-color: #373737;
+}
+
+
+/*BETTING SLATE*/
+.tab {
+    float:left;
+    margin:20px;
+    border: 1px solid white;
+    padding:10px;
+}
+
+.bet {
+    float:left;
+    border: 1px solid white;
+    padding:10px;
+    width: 100px;
+    padding: 20px;
+}
+
+.teamName {
+    width:200px;
+    float:left;
+    
+       margin: 5px 0px;
+    padding: 20px;
+}
+
+.dayHeaders .dateheader {
+    width: 200px;
+    padding: 20px;
+    display: inline-block;
+}
+
+.dayHeaders .header {
+    width: 100px;
+
+}
+
+.timeLabel {
+    padding:20px 10px;
+    background-color: #373737;
+}
+
+.matchup {
+    padding:20px 0px;
+}
