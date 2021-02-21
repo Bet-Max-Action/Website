@@ -151,9 +151,9 @@
             var odds = $.urlParam('odds');
             var wager = $.urlParam('wager');
             
-            $("#bettypevalue").html(type);
-            $("#teamvalue").html(team);
-            $("#oddsvalue").html(odds);
+            $("#bettypevalue").html(type.toString().replaceAll('%20',' '));
+            $("#teamvalue").html(team.toString().replaceAll('%20', ' '));
+            $("#oddsvalue").html(odds.toString().replaceAll('%20', ' '));
             if (wager != 'NA') {
                 $("#wagervalue").html(wager);
             } else {
