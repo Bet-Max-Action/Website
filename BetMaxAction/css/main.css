@@ -620,6 +620,14 @@ a:hover {
 }
 
 
+.filter {
+    float: left;
+    padding: 10px;
+}
+
+#prize_standings .place {
+    width:400px;
+}
 
 /*
     Fonts: 
