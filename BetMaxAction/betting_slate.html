@@ -439,7 +439,7 @@
                     <div id="wager"><span class="label">Wager: </span><span id="wagervalue" class="value"></span></div>
                     <div id="amount"><input id="amountwagered" type="text" oninput="javascript:calculateWager();"/></div>
                     <div id="potential_payout"><span class="label">Potential Payout: </span><span id="potential_payoutvalue" class="value"></span></div>
-                    <div id="bet_detail_options"><a href="javascript:SubmitFinalBet();">Place Bet <span><i class="fas fa-arrow-right"></i></span></a><a href="javascript:CloseBet();">Cancel Bet <span><i class="fas fa-arrow-right"></i></span></a></div>
+                    <div id="bet_detail_options"><a href="javascript:SubmitFinalBet();">Place Bet <span><i class="fas fa-arrow-right"></i></span></a><br /><a href="javascript:CloseBet();">Cancel Bet <span><i class="fas fa-arrow-right"></i></span></a></div>
                 </div>
             </div>
          </div>
@@ -460,7 +460,7 @@
  *---------------------------------------------------------------------*/
 
             #bet_detail_options a {
-                padding: 30px;
+                padding: 0px 10px;
                 text-decoration: none;
                 font-size: 20px;
                 text-align: center;
@@ -470,13 +470,13 @@
 	position: absolute;
 	box-sizing: border-box;
 	color: white;
-	padding: 15px 35px 15px 50px;
+	padding: 15px 35px 15px 35px;
 	
 	line-height: normal;
     top: 350px;
-    left: 500px;
+    left: 400px;
     background-color:#006f3d;
-    width: 600px;
+    width: 350px;
 }
 
 #bets_html_for_modal .content, #finalize_bet .content {
