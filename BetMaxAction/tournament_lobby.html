@@ -111,7 +111,7 @@
                     </div>
                     <!--end .col2-->
                     <div class="col3 sort" data-sort-value="dollars" data-sort-direction="asc">
-                        <h3>Tournament $</h3>
+                        <h3>TD$</h3>
                         <div class="rtoggle"><em class="fa fa-sort"></em></div>
                     </div>
                     <!--end .col3-->
@@ -120,6 +120,11 @@
                         <div class="rtoggle"><em class="fa fa-sort"></em></div>
                     </div>
                     <!--end .col4-->
+                    <div class="col5 sort" data-sort-value="prizepools" data-sort-direction="asc">
+                        <h3>Prize Pool</h3>
+                        <div class="rtoggle"><em class="fa fa-sort"></em></div>
+                    </div>
+                    <!--end .col5-->
                     <div class="clear">&nbsp;</div>
                 </div>
                 <!--end #res_headers-->
@@ -149,6 +154,10 @@
                         2500
                         </div>
                         <!--end .col4-->
+                        <div class="col5 rprizepool">
+                        $112,500
+                        </div>
+                        <!--end .col5-->
                         <div class="clear">&nbsp;</div>
                     </div>
                     <!--end .contest-->
@@ -177,6 +186,10 @@
                         1000
                         </div>
                         <!--end .col4-->
+                        <div class="col5 rprizepool">
+                        $4,500
+                        </div>
+                        <!--end .col5-->
                         <div class="clear">&nbsp;</div>
                     </div>
                     <!--end .contest-->
@@ -205,6 +218,10 @@
                         10
                         </div>
                         <!--end .col4-->
+                        <div class="col5 rprizepool">
+                        $90
+                        </div>
+                        <!--end .col5-->
                         <div class="clear">&nbsp;</div>
                     </div>
                     <!--end .contest-->
@@ -233,6 +250,10 @@
                         4
                         </div>
                         <!--end .col4-->
+                        <div class="col5 rprizepool">
+                        $900
+                        </div>
+                        <!--end .col5-->
                         <div class="clear">&nbsp;</div>
                     </div>
                     <!--end .contest-->
@@ -261,6 +282,10 @@
                         1000
                         </div>
                         <!--end .col4-->
+                        <div class="col5 rprizepool">
+                        $22,500
+                        </div>
+                        <!--end .col5-->
                         <div class="clear">&nbsp;</div>
                     </div>
                     <!--end .contest-->
@@ -278,7 +303,7 @@
                         </div>
                         <!--end .col1-->
                         <div class="col2 rtype">
-                        $25
+                        $5
                         </div>
                         <!--end .col2-->
                         <div class="col3 rdollars">
@@ -289,6 +314,10 @@
                         2500
                         </div>
                         <!--end .col4-->
+                        <div class="col5 rprizepool">
+                        $11,250
+                        </div>
+                        <!--end .col5-->
                         <div class="clear">&nbsp;</div>
                     </div>
                     <!--end .contest-->
@@ -317,6 +346,10 @@
                         25
                         </div>
                         <!--end .col4-->
+                        <div class="col5 rprizepool">
+                        $2,250
+                        </div>
+                        <!--end .col5-->
                         <div class="clear">&nbsp;</div>
                     </div>
                     <!--end .contest-->
@@ -345,6 +378,10 @@
                         1500
                         </div>
                         <!--end .col4-->
+                        <div class="col5 rprizepool">
+                        $33,750
+                        </div>
+                        <!--end .col5-->
                         <div class="clear">&nbsp;</div>
                     </div>
                     <!--end .contest-->
@@ -387,6 +424,10 @@
                     },
                     entries: function (itemElem) {
                         var text = $(itemElem).find('.rentries').text().replace('$', '').replace(',', '');
+                        return parseFloat(text);
+                    },
+                    prizepools: function (itemElem) {
+                        var text = $(itemElem).find('.rprizepool').text().replace('$', '').replace(',', '');
                         return parseFloat(text);
                     },
                     date: function (itemElem) {
