@@ -9,7 +9,7 @@
     }
 
     #contests .col2 {
-        width: 18%;
+        
     }
 
     #contests .col3 {
@@ -17,7 +17,11 @@
     }
 
     #contests .col4 {
-        width: 18%;
+       
+    }
+
+    #contests .col6 {
+       
     }
     #userprofile_details {
         
@@ -58,7 +62,7 @@
     }
 
     #contests .col2,#contests .col4 {
-        width: 15%;
+        
     }
 
     #userprofile_details {
