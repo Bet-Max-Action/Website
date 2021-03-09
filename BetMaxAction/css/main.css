@@ -394,6 +394,10 @@ a:hover {
 /*---------------------------------------------------------------------
     *  contests
     *---------------------------------------------------------------------*/
+
+.buttonlink {
+    text-decoration-line:none;
+}
     #contests {
     position: relative;
     box-sizing: border-box;
@@ -410,7 +414,7 @@ a:hover {
             position: relative;
     box-sizing: border-box;
     float: left;
-    width: 50px;
+   width: 110px;
     padding: 20px 10px 20px 20px;
     margin: 0 10px;
         }
@@ -433,14 +437,14 @@ a:hover {
     width: 10%;
     padding: 20px 10px 20px 20px;
     margin: 0 10px;
-    min-width:120px;
+    min-width:110px;
     }
     #contests .col3 {
     position: relative;
     box-sizing: border-box;
     float: left;
     width: 10%;
-    min-width:120px;
+    min-width:90px;
     padding: 20px 10px 20px 20px;
    
     }
@@ -451,7 +455,7 @@ a:hover {
     width: 10%;
     padding: 20px 10px 20px 20px;
     margin: 0 10px;
-    min-width:120px;
+    min-width:110px;
         }
 
      #contests .col5 {
@@ -546,6 +550,10 @@ a:hover {
 
 }
 
+.enter_contest {
+       background-color:#006f3d;
+    padding: 10px;
+}
 .standing {
     float:left;
     width:100%;
@@ -659,6 +667,15 @@ a:hover {
 
 #prize_standings .place {
     width:400px;
+}
+
+     .bets_html_for_modal-hidden {
+    display:none;
+    margin-top: -50px;
+}
+
+.bets_html_for_modal-visible {
+    display:block;
 }
 
 /*

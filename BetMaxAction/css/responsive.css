@@ -1,7 +1,7 @@
 ﻿/* Normal sized monitors*/
 @media only screen and (max-width: 1820px) {
     #contests .col0, #contests .col5 {
-        width: 50px;
+       
     }
 
     #contests .col1 {
@@ -9,19 +9,19 @@
     }
 
     #contests .col2 {
-        
+        width:8%;
     }
 
     #contests .col3 {
-        
+        width:8%;
     }
 
     #contests .col4 {
-       
+       width:8%;
     }
 
     #contests .col6 {
-       
+       width:8%;
     }
     #userprofile_details {
         
@@ -40,7 +40,7 @@
     }
 
      #contests .col2,#contests .col4 {
-        width: 15%;
+        
     }
     #userprofile_details {
         
