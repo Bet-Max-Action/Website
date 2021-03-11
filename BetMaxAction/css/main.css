@@ -611,6 +611,14 @@ a:hover {
     padding: 20px;
 }
 
+.wager {
+    width:600px;
+    float:left;
+    
+       margin: 5px 0px;
+    padding: 20px;
+}
+
 .dayHeaders .dateheader {
     width: 200px;
     padding: 20px;
@@ -620,6 +628,15 @@ a:hover {
 .dayHeaders .header {
     width: 100px;
 
+}
+
+.payoutLabel {
+    padding:20px 10px;
+    background-color: #006f3d;
+}
+
+.loss {
+    background-color: red;
 }
 
 .timeLabel {
