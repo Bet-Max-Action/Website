@@ -75,7 +75,7 @@ background-color:#006f3d;
     padding:0px;
     min-width:260px;
     float:left;
-    overflow:hidden;
+    /*overflow:hidden;*/
     font-size:20px;
     height: 100%;
     min-width:338px; 
@@ -99,8 +99,8 @@ background-color:#006f3d;
     
    padding:0px 15px;
    color:white;
-    
-    overflow:hidden;
+    overflow-x:hidden;
+    overflow-y:auto;
     height: 100%;
 }
 
@@ -612,6 +612,10 @@ a:hover {
 }
 
 .wager {
+    
+}
+
+#mybets .wager {
     width:600px;
     float:left;
     
