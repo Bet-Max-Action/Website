@@ -28,8 +28,8 @@
                 
             </div>
             <div id="notifications" class="white-text">
-                <div><span class="fa-icon"><i class="far fa-bell"></i></span></div>
-                
+                <div><span class="fa-icon"><i class="far fa-bell"></i></span><br /><span class="fa-icon show-asterick"><i class="fas fa-asterisk" style="font-size: 16px; margin-left: 7px;"></i></span></div>
+
                 <div id="hasNotifications" class="yellow-text"></div>
             </div>
         </div>
@@ -95,14 +95,14 @@
                     <div class="matchup">
                         <div class="homeTeam">
                             <div class="teamName">Diggs First TD</div>
-                            <div class="wager"> +400 / ($TD 500)</div>
+                            <div class="wager"> Odds: +400 / Bet: 500 TD$ / Potential Payout: 2500 TD$</div>
                         </div>
                         
                         <div style="clear:both;"></div>
                         <div class="timeLabel">Bet #15432894</div>
                         <div class="awayTeam">
                             <div class="teamName">Bills -5.5 </div>
-                            <div class="wager"> -109 / ($TD 500)</div>
+                            <div class="wager"> Odds: -109 / Bet: 500 TD$ / Potential Payout: 958.72 TD$</div>
                         </div>
                         
                         <div style="clear:both;"></div>
@@ -228,7 +228,24 @@
             });
 
         });
+        $(document).ready(function () {
 
+            $.urlParam = function (name) {
+                var results = new RegExp('[\?&]' + name + '=([^&#]*)')
+                                  .exec(window.location.search);
+
+                return (results !== null) ? results[1] || 0 : false;
+            }
+
+            var showasterick = $.urlParam('showasterick');
+
+            
+            if (showasterick == 'Y' || showasterick == 'T' || showasterick == '1') {
+                $(".show-asterick").show();
+            } else {
+                $(".show-asterick").hide();
+            }
+        });
 
         $(document).ready(function () {
 
@@ -261,6 +278,7 @@
                     $(this).attr('click', '1');
                 }
 
+                $(".show-asterick").hide();
             });
         });
 

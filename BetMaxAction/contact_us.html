@@ -28,8 +28,8 @@
                 
             </div>
             <div id="notifications" class="white-text">
-                <div><span class="fa-icon"><i class="far fa-bell"></i></span></div>
-                
+                <div><span class="fa-icon"><i class="far fa-bell"></i></span><br /><span class="fa-icon show-asterick"><i class="fas fa-asterisk" style="font-size: 16px; margin-left: 7px;"></i></span></div>
+
                 <div id="hasNotifications" class="yellow-text"></div>
             </div>
         </div>
@@ -161,7 +161,24 @@
 
         });
 
+        $(document).ready(function () {
 
+            $.urlParam = function (name) {
+                var results = new RegExp('[\?&]' + name + '=([^&#]*)')
+                                  .exec(window.location.search);
+
+                return (results !== null) ? results[1] || 0 : false;
+            }
+
+            var showasterick = $.urlParam('showasterick');
+
+            
+            if (showasterick == 'Y' || showasterick == 'T' || showasterick == '1') {
+                $(".show-asterick").show();
+            } else {
+                $(".show-asterick").hide();
+            }
+        });
         $(document).ready(function () {
 
             $("#userprofile_image").click(function () {
@@ -193,6 +210,7 @@
                     $(this).attr('click', '1');
                 }
 
+                $(".show-asterick").hide();
             });
         });
 
