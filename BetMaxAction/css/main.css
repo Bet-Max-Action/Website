@@ -513,24 +513,24 @@ a:hover {
     background-color: #006f3d;
     padding: 20px;
     width: 325px;
-    margin: 10px;
+    margin: 10px 0px;
     float: left;
     
 }
 
 #contest_details div a, .ViewAllStandings a {
-    padding: 30px;
+    padding: 20px;
     text-decoration:none;
     font-size:20px;
     text-align:center;
 }
 
 #contest_summary {
-    margin: 10px;
+    margin: 10px 0px;
 }
 
 #contest_standings {
-    margin: 10px;
+    margin: 10px 0px;
         width: 760px;
 }
 
@@ -539,7 +539,7 @@ a:hover {
     }
 
 #tournament_balance, #tournament_leader {
-    margin: 10px;
+    margin: 10px 0px;
     font-size:24px;
 
 }
