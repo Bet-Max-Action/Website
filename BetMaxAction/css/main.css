@@ -149,26 +149,31 @@ a:hover {
     float:right;
     margin-top: 28px;
     font-size:48px;
+
 }
 #userprofile_details {
-    position: absolute;
-    display:none;
-     /*margin-left: 87%;*/
+    /* position: absolute;
+   display:none;
+     margin-left: 87%;*/
         z-index: 100;
     width: 300px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
-    background-color: #373737;
+    /*box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+    background-color: #373737;*/
     color:#FFF;
     padding:20px;
-      top: 138px;
-   right:0;
+     /* top: 138px;
+     top:0; 
+   right:0;*/
+     float:right;
+     
+    margin-top: 10px;
 }
     #userprofile_details h2 {
-        font-size: 24px;
+        font-size: 18px;
     }
 
 #additionaldetails {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 #additionaldetails div {

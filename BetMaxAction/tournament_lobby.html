@@ -21,7 +21,13 @@
                 <img src="images/logo.png" alt="Bet Max Action | Where the small guy plays large!"></a>
         </div>
         <div id="profile" class="lightgrey-bg">
-
+            <div id="userprofile_details">
+                <h2>Scott Freeman</h2>
+                <div id="additionaldetails">
+                    <div>Balance: $250</div>
+                    
+                </div>
+            </div>
             <div id="userprofile" class="white-text">
                 <div id="userprofile_image">
                     <span class="fa-icon"><i class="fas fa-user-circle"></i></span>
@@ -33,15 +39,11 @@
 
                 <div id="hasNotifications" class="yellow-text"></div>
             </div>
+            
+            
         </div>
     </header>
-    <div id="userprofile_details">
-        <h2>Scott Freeman</h2>
-        <div id="additionaldetails">
-            <div>Balance: $250</div>
-            <div><a href="shell.html">View Details</a> </div>
-        </div>
-    </div>
+    
     <div id="notification_list">
         <div class="notification">
             <div class="notification_left">
@@ -394,17 +396,17 @@
 </div>
            
         </div><!--End: #main -->
-        <div id="enter_contest" class="darkgrey-bg bets_html_for_modal-hidden">
-            <div class="content">
-                <div class="table_header">
+        <div id="modal_enter_contest" class="darkgrey-bg bets_html_for_modal-hidden modal">
+            <div class="modal_content">
+                <div class="modal_header">
                     <h1>Enter Contest</h1>
                 </div>
-                <div class="bet_details">
+                <div class="modal_details">
                     <div id="inner_bet_details">
                         <div class="inner_contest_name">You are entering: <span class="inner_contest_name_value">Contest Name</span></div>
                         <div class="inner_contest_message">Your account will be deducted <span class="inner_contest_amount_value"></span></div>
                     </div>
-                    <div><a href="my_contests.html">Enter Contest <span><i class="fas fa-arrow-right"></i></span></a><br /><a href="javascript:CancelEntry();">Cancel Entry <span><i class="fas fa-arrow-right"></i></span></a></div>
+                    <div class="modal_actions"><a href="my_contests.html" class="modal_button buttonlink">Enter Contest <span><i class="fas fa-arrow-right"></i></span></a><br /><a href="javascript:CancelEntry();" class="modal_button buttonlink">Cancel Entry <span><i class="fas fa-arrow-right"></i></span></a></div>
                 </div>
             </div>
         </div>
@@ -412,20 +414,38 @@
     <footer>
     </footer>
     <style>
-        #enter_contest {
+
+        .modal_button {
+            background-color: #006f3d;
+    padding: 10px;
+    margin: 10px 0px;
+    float: left;
+        }
+        .modal_action {
+            margin-top: 20px;
+        }
+        .modal_header {
+            margin: 10px 10px;
+        }
+
+        .modal_details {
+            margin: 10px 10px;
+        }
+        #modal_enter_contest {
             position: absolute;
 	        box-sizing: border-box;
 	        color: white;
-	        padding: 15px 35px 15px 35px;
-	
+	        
 	        line-height: normal;
-            top: 350px;
+            top: 300px;
             left: 400px;
-            background-color:#006f3d;
-            width: 350px;
+            width: 300px;
+            border: #006f3d 5px solid;
+                border-radius: 40px;
+                padding:20px;
         }
 
-        #bet_details a {
+        #modal_details a {
                 padding: 0px 10px;
                 text-decoration: none;
                 font-size: 20px;
@@ -521,16 +541,7 @@
         $(document).ready(function () {
 
             $("#userprofile_image").click(function () {
-                var X = $(this).attr('click');
-                if (X == 1) {
-                    $("#userprofile_details").hide();
-                    $(this).attr('click', '0');
-                }
-                else {
-                    $("#notification_list").hide();// ensure that two windows aren't open
-                    $("#userprofile_details").show();
-                    $(this).attr('click', '1');
-                }
+                
 
             });
         });
@@ -544,7 +555,7 @@
                     $(this).attr('click', '0');
                 }
                 else {
-                    $("#userprofile_details").hide(); // ensure that two windows aren't open
+                    //$("#userprofile_details").hide(); // ensure that two windows aren't open
                     $("#notification_list").show();
                     $(this).attr('click', '1');
                 }
@@ -558,7 +569,7 @@
 
             $(".inner_contest_amount_value").html(entryFee.toString().replaceAll('%20', ' '));
             
-            var place_bet_html = $('#enter_contest');
+            var place_bet_html = $('#modal_enter_contest');
                      
             
             place_bet_html.toggleClass("bets_html_for_modal-hidden", "bets_html_for_modal-visible");
@@ -568,7 +579,7 @@
         }
 
         function CancelEntry() {
-            var place_bet_html = $('#enter_contest');
+            var place_bet_html = $('#modal_enter_contest');
 
 
             place_bet_html.toggleClass("bets_html_for_modal-hidden", "bets_html_for_modal-visible");
