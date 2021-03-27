@@ -265,7 +265,7 @@
         function SetCookie() {
             var username = $("#cookieusername").val();
             var balance = $("#cookiebalance").val();
-            var value = 'name=' + username + ';balance=' + balance+';';
+            var value = 'name=' + username + '|balance=' + balance+';';
             alert('Setting Cookies: name=' + username + ';balance=' + balance);
             createCookie('complianceCookieBMA', value, 120);
             var cookieValue = checkCookie('complianceCookieBMA');
