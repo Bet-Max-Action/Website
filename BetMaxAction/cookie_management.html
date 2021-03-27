@@ -266,7 +266,7 @@
             var username = $("#cookieusername").val();
             var balance = $("#cookiebalance").val();
             var value = 'name=' + username + '|balance=' + balance+';';
-            alert('Setting Cookies: name=' + username + ';balance=' + balance);
+            //alert('Setting Cookies: name=' + username + ';balance=' + balance);
             createCookie('complianceCookieBMA', value, 120);
             setHeader();
         }
@@ -281,7 +281,7 @@
                 var nameValuesArray = cookieValue.split('=');
                 var varname = nameValuesArray[0];
                 var varvalue = nameValuesArray[1];
-                alert('varname=' + varname + ';varvalue=' + varvalue);
+                //alert('varname=' + varname + ';varvalue=' + varvalue);
                 if (varname == 'balance') {
                     balance = varvalue;
                 }
@@ -292,6 +292,8 @@
                 // while (c.charAt(0) == ' ') c = c.substring(1, c.length);
                 // if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
             }
+            alert('BALANCE:' + $("#userprofile_details_balance").html());
+            alert('USERNAME:' + $("#userprofile_details_name").html());
             $("#userprofile_details_balance").html(balance);
             $("#userprofile_details_name").html(username);
         }
