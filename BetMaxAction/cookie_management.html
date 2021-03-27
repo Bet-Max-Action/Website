@@ -294,8 +294,11 @@
             }
             alert('BALANCE:' + $("#userprofile_details_balance").html());
             alert('USERNAME:' + $("#userprofile_details_name").html());
-            $("#userprofile_details_balance").html(balance);
+            $("#userprofile_details_balance").html("Balance:"+ balance);
             $("#userprofile_details_name").html(username);
+
+            alert('BALANCE:' + $("#userprofile_details_balance").html());
+            alert('USERNAME:' + $("#userprofile_details_name").html());
         }
 
         function EnterContest(contestName, entryFee, url) {
