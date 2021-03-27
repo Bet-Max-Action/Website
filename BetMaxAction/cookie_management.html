@@ -22,9 +22,9 @@
         </div>
         <div id="profile" class="lightgrey-bg">
             <div id="userprofile_details">
-                <h2>Scott Freeman</h2>
+                <h2 id="userprofile_details_name">Scott Freeman</h2>
                 <div id="additionaldetails">
-                    <div>Balance: $250</div>
+                    <div id="userprofile_details_balance">Balance: $250</div>
                     
                 </div>
             </div>
@@ -289,6 +289,31 @@
                // if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
             }
             alert('FINAL username:' + username + ';balance: ' + balance);
+        }
+
+        function setHeader() {
+            var cookieValues = checkCookie('complianceCookieBMA');
+            var cookieValueArray = cookieValues.split('|');
+            var balance = '';
+            var username = '';
+            for (var i = 0; i < cookieValueArray.length; i++) {
+                var cookieValue = cookieValueArray[i];
+                var nameValuesArray = cookieValue.split('=');
+                var varname = nameValuesArray[0];
+                var varvalue = nameValuesArray[1];
+                alert('varname=' + varname + ';varvalue=' + varvalue);
+                if (varname == 'balance') {
+                    balance = varvalue;
+                }
+
+                if (varname == 'name') {
+                    username = varvalue;
+                }
+                // while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                // if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            $("#userprofile_details_balance").html(balance);
+            $("#userprofile_details_name").html(username);
         }
 
         function EnterContest(contestName, entryFee, url) {
