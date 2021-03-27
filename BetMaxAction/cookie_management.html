@@ -268,8 +268,27 @@
             var value = 'name=' + username + '|balance=' + balance+';';
             alert('Setting Cookies: name=' + username + ';balance=' + balance);
             createCookie('complianceCookieBMA', value, 120);
-            var cookieValue = checkCookie('complianceCookieBMA');
-            alert('FINAL' + cookieValue);
+            var cookieValues = checkCookie('complianceCookieBMA');
+            var cookieValueArray = cookieValues.split('|');
+             balance = '';
+             username = '';
+            for (var i = 0; i < cookieValueArray.length; i++) {
+                var cookieValue = cookieValueArray[i];
+                var nameValuesArray = cookieValue.split('=');
+                var varname = nameValuesArray[0];
+                var varvalue = nameValuesArray[1];
+                alert('varname=' + varname + ';varvalue=' + varvalue);
+                if (varname == 'balance') {
+                    balance = varvalue;
+                }
+
+                if (varname == 'name') {
+                    username = varvalue;
+                }
+               // while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+               // if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            alert('FINAL username:' + username + ';balance: ' + balance);
         }
 
         function EnterContest(contestName, entryFee, url) {
