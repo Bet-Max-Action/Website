@@ -24,7 +24,7 @@
             <div id="userprofile_details">
                 <h2 id="userprofile_details_name">Scott Freeman</h2>
                 <div id="additionaldetails">
-                    <div id="userprofile_details_balance">Balance: $250</div>
+                    <div>Balance: $<span id="userprofile_details_balance">250</span></div>
                     
                 </div>
             </div>
@@ -87,9 +87,14 @@
             </div>
             <div id="cookiemanagement">
                     <form onsubmit="javascript:SetCookie();return false;">
-                        <input type="text" id="cookieusername" /><br />
-                        <input type="text" id="cookiebalance" /><br />
+                       Username: <input type="text" id="cookieusername" /><br />
+                       Balance: <input type="text" id="cookiebalance" /><br />
                         <input type="submit" id="submit_btn" /><br />
+                    </form>
+
+                <form onsubmit="javascript:UpdateCookie();return false;">
+                      Subtract from balance:  <input type="text" id="subtractbalance" /><br />
+                        <input type="submit" id="submit_btn2" /><br />
                     </form>
                 </div>
            
@@ -273,6 +278,18 @@
             setHeader();
         }
 
+        function UpdateBalance() {
+            //get balance and name
+            var balanace = $("#userprofile_details_balance").html();
+            var username = $("#userprofile_details_name").html();
+            var inputEntryFee = $("#subtractbalance").html();
+            //subtract from balance
+            var value = 'name=' + username + '|balance=' + balance + ';';
+            //alert('Setting Cookies: name=' + username + ';balance=' + balance);
+            createCookie('complianceCookieBMA', value, 120);
+            setHeader();
+        }
+
         function setHeader() {
             var cookieValues = checkCookie('complianceCookieBMA');
             var cookieValueArray = cookieValues.split('|');
@@ -291,16 +308,12 @@
                 if (varname == 'name') {
                     username = varvalue;
                 }
-                // while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-                // if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+                
             }
-            //alert('BALANCE:' + $("#userprofile_details_balance").html());
-            //alert('USERNAME:' + $("#userprofile_details_name").html());
-            $("#userprofile_details_balance").html("Balance:"+ balance);
+           
+            $("#userprofile_details_balance").html(balance);
             $("#userprofile_details_name").html(username);
 
-            //alert('BALANCE:' + $("#userprofile_details_balance").html());
-            //alert('USERNAME:' + $("#userprofile_details_name").html());
         }
 
         function EnterContest(contestName, entryFee, url) {
@@ -314,7 +327,6 @@
 
             place_bet_html.toggleClass("bets_html_for_modal-hidden", "bets_html_for_modal-visible");
 
-            //alert('Where is the window');
 
         }
 
