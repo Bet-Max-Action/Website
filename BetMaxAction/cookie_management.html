@@ -86,7 +86,7 @@
                 
             </div>
             <div id="cookiemanagement">
-                <div>Version 1.2</div>
+                <div>Version 1.3</div>
                     <form onsubmit="javascript:SetCookie();return false;">
                        Username: <input type="text" id="cookieusername" /><br />
                        Balance: <input type="text" id="cookiebalance" /><br />
@@ -284,9 +284,9 @@
             var balance = $("#userprofile_details_balance").html();
             alert('balance=' + balance);
             var username = $("#userprofile_details_name").html();
-            alert('balance=' + balance);
+            alert('username=' + username);
             var inputEntryFee = $("#subtractbalance").html();
-            alert('balance=' + balance);
+            alert('inputEntryFee=' + inputEntryFee);
             balance = balance - inputEntryFee;
             alert('final balance=' + balance);
             //subtract from balance
